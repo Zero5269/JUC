@@ -41,7 +41,7 @@ public class T03_Sleep_Yield_Join {
 
     static void testJoin() {
         Thread t1 = new Thread(()->{
-            for(int i=0; i<100; i++) {
+            for(int i=0; i<10; i++) {
                 System.out.println("A" + i);
                 try {
                     Thread.sleep(500);
@@ -60,7 +60,7 @@ public class T03_Sleep_Yield_Join {
                 e.printStackTrace();
             }
 
-            for(int i=0; i<100; i++) {
+            for(int i=0; i<10; i++) {
                 System.out.println("A" + i);
                 try {
                     Thread.sleep(500);
