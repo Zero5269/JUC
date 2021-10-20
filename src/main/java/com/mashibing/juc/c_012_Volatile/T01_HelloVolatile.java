@@ -20,7 +20,12 @@ package com.mashibing.juc.c_012_Volatile;
 import java.util.concurrent.TimeUnit;
 
 public class T01_HelloVolatile {
-	/*volatile*/ boolean running = true; //对比一下有无volatile的情况下，整个程序运行结果的区别
+	//对比一下有无volatile的情况下，整个程序运行结果的区别
+	// 这种情况算不出值
+//	 boolean running = true;
+	// volatile保证了对象的可见性，不加的情况下，可能会出现JIT及时编译器将变量直接替换成常量的情况
+	// 这种情况可以算出值
+	volatile boolean running = true;
 	void m() {
 		System.out.println("m start");
 		while(running) {
