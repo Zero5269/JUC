@@ -21,6 +21,7 @@ public class T13_ParallelStreamAPI {
 		
 		start = System.currentTimeMillis();
 		nums.parallelStream().forEach(T13_ParallelStreamAPI::isPrime);
+//		nums.parallelStream().forEach(v->isPrime(v));
 		end = System.currentTimeMillis();
 		
 		System.out.println(end - start);
